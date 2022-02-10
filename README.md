@@ -1,8 +1,6 @@
 # #42 Main Education”
 
-—————————————————————————————————————————
-⚡MAKEFILE 👇
-—————————————————————————————————————————
+———————————————————⚡MAKEFILE 👇—————————————————————
 
 ⚡ Libft.a’yı “NAME”e tanımladım aşağıda’da $(NAME)’i “all”a atadım all dediğim için hepsini kapsar.
 
