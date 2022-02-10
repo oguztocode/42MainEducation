@@ -92,7 +92,55 @@ Sonradan tanımlı bir tip olduğunu belirtmek için “_t” kullanıyoruz.
 
 —————————————————————————————————————————
 
-1-#Calloc”
+1-#Memset”
+
+//****Stringin belli bir kısmını sansürlüyor****/
+
+🌌Elimde bir string, karakter ve uzunluk var.
+
+String=abcdef               string=llllef
+
+char=l
+
+length=4
+
+2-#Memmove”
+
+//****s1 ve s2 ile örtüşmeyen n karakterlik geçici bir diziye kopyalıyor sonra o diziden n karakterlik kadar kopyalanıyormuş gibi gösteriliyor****//
+
+Açıklama : İki ayrı bellek adresinde saklanan src ve dest dizinlerini bellekte çakışmalarını önleyerek birbirine aktarım (Kopyalama) yapar çakışmalar src ve dest teki bilgilerin birbiri üzerine binmesine ve bozulmaya neden olur.
+
+3-#Memcpy”
+
+//****n kadar karakteri s2 'den s1'e taşır üst üste aynı karakterler geliyorsa fonksiyon tanımsız.****//
+
+🌌Eğer verdiğim karakter ya da src ile dest
+
+4-#Memchr”
+
+//****C’nin ilk örneği için stringin ilk n baytını tarar****//
+
+🌌Karakter belirliyoruz adrese gidip içinde arıyor sonra bellek adresini dönderiyor.
+
+🌌İ’nin n’den küçük olma durumunda fonksiyon başlıyor çünkü i yani sayacımız arayacağımız karakteri geçmiş ise o karakteri bulamayız.
+
+🌌Eğer aradğımız karakterin adresine geldiyse yani aradığım karaktere eşitse kendisini dönderiyoruz.
+
+🌌Ve i’yi arttırıp return null dönderiyoruz.
+
+5-#Memcmp”
+
+//****bellek alanı str1 ve bellek alanı str2'nin ilk n baytını karşılaştırır.**//**
+
+🌌Size_t:Asla negatif değer alamaz int’i tanımlıyoruz.
+
+🌌i ‘nin n’den küçük olduğu durumda yani bizim verdiğimiz n kadar durumundan küçük olduğu
+
+durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciideki karakterlerin arasındaki farkı dönderiyoruz.
+
+🌌Bu fonksiyon bellekte bakıyor aralarındaki farka.
+
+6-#Calloc”
 
 //**Bellek ayırıp ayrılan belleğe 0 dolduruyor**//
 
@@ -106,53 +154,13 @@ Sonradan tanımlı bir tip olduğunu belirtmek için “_t” kullanıyoruz.
 
 🌌Bzero kullanarak da elemanların sayısı * elemanların boyutu kadar sansürle dedim ve kendisini döndürdüm.
 
-2-#Memset”
+7-#Bzero”
 
-//****Stringin belli bir kısmını sansürlüyor****/
+//**Stringin belli bir kısmını sansürlüyor**//
 
-🌌Elimde bir string, karakter ve uzunluk var.
+🌌 Bzero işlevi, verilen bellek alanını sıfır bayt ( \0 ) ile silmek için kullanılabilir. Bellek bölgesinin başlangıç adresi ve sıfırlanması gereken bayt sayısı olmak üzere iki argüman alır.
 
-String=abcdef               string=llllef
-
-char=l
-
-length=4
-
-3-#Memmove”
-
-//****s1 ve s2 ile örtüşmeyen n karakterlik geçici bir diziye kopyalıyor sonra o diziden n karakterlik kadar kopyalanıyormuş gibi gösteriliyor****//
-
-Açıklama : İki ayrı bellek adresinde saklanan src ve dest dizinlerini bellekte çakışmalarını önleyerek birbirine aktarım (Kopyalama) yapar çakışmalar src ve dest teki bilgilerin birbiri üzerine binmesine ve bozulmaya neden olur.
-
-4-#Memcpy”
-
-//****n kadar karakteri s2 'den s1'e taşır üst üste aynı karakterler geliyorsa fonksiyon tanımsız.****//
-
-🌌Eğer verdiğim karakter ya da src ile dest
-
-5-#Memchr”
-
-//****C’nin ilk örneği için stringin ilk n baytını tarar****//
-
-🌌Karakter belirliyoruz adrese gidip içinde arıyor sonra bellek adresini dönderiyor.
-
-🌌İ’nin n’den küçük olma durumunda fonksiyon başlıyor çünkü i yani sayacımız arayacağımız karakteri geçmiş ise o karakteri bulamayız.
-
-🌌Eğer aradğımız karakterin adresine geldiyse yani aradığım karaktere eşitse kendisini dönderiyoruz.
-
-🌌Ve i’yi arttırıp return null dönderiyoruz.
-
-6-#Memcmp”
-
-//****bellek alanı str1 ve bellek alanı str2'nin ilk n baytını karşılaştırır.**//**
-
-🌌Size_t:Asla negatif değer alamaz int’i tanımlıyoruz.
-
-🌌i ‘nin n’den küçük olduğu durumda yani bizim verdiğimiz n kadar durumundan küçük olduğu
-
-durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciideki karakterlerin arasındaki farkı dönderiyoruz.
-
-🌌Bu fonksiyon bellekte bakıyor aralarındaki farka.
+🌌”n” değerimizin 0’dan büyük olduğu durumda 0’a gelene kadar ki durumda gittiğimiz adreste “b”yi arttırıp 0’a eşitliyoruz.
 
 —————————————————————————————————————————
 
@@ -160,7 +168,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 —————————————————————————————————————————
 
-7-#Strchr” 
+1-#Strchr” 
 
 //****Bize verilen stringin belli bir karakterden sonrasını alıyoruz****//
 
@@ -172,7 +180,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 *Size_t’ de bir int’dir.Size_t’de sadece pozitif değer alabilir.Asla negatif bir sayı alamıyor.
 
-8-#Strdup”
+2-#Strdup”
 
 //****Stringin yerini pointer’a vermek****//
 
@@ -182,11 +190,11 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Ve “i”yi arttırıyorum attıktan sonra twindeki karakterim son karaktere eşit olduğunda twindeki stringimi dönüyorum.
 
-9-#Strrchr”
+3-#Strrchr”
 
 👨‍🚀Bize *string veriyor önce int’le i tanımlıyoruz ve 0’a eşitleyip arttırıyoruz.Dizenin uzunluğunu ölçmüş oluyoruz.Bu fonksiyon sondan geriye doğru arama yapıyor.Mesela c’miz a olsun kelimemiz de araba olsun “araba” kelimesinde gözüken en son a’yı dönderir.C’nin en son gözüktüğü yerin adresini istiyor bizden o yüzden en son gördüğü yerdeki adrese eşitliyor ve uzunluğunu return ediyor.sonra geriye doğru gelip diğer karakterlere null koyuyor.
 
-10-#Strdup”
+4- #Strdup”
 
 //****S dizesinin bir kopyası olan yeni bir dizeye bir işaretçi döndürür.Yeni dizge için bellek malloc ile elde edilir****//
 
@@ -196,7 +204,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Sonrasında i’mizi 0’a eşitleyip son karaktere eşit değilse dizemizi twin’in içine kopyalayıp i’mizi arttırıyoruz onun içinde de sayıyor.Kopyaladığımız dize son karaktere eşit değilse elde ettiğimiz dizeyi dönderiyoruz.
 
-11-#Strjoin”
+5-#Strjoin”
 
 //****2 tane stringi aralarında bir boşluk olacak şekilde bağlayarak tek bir dize olarak gözükmesini sağlar****//
 
@@ -210,7 +218,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Son dize uzunluğumuz null’a eşit değilse dizenin kendisini dönderiyoruz.
 
-12-#Strlen”
+6-#Strlen”
 
 //****Stringimizin uzunluğunu veren fonksiyondur****//
 
@@ -218,7 +226,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀İ değerimizi 0’a eşitliyoruz. i’yi arttırarak stringin uzunluğunu buluyoruz.
 
-13-#Substr”
+7-#Substr”
 
 //****Bir stringin belli bir kısmından alt metin almamızı sağlar****//
 
@@ -228,7 +236,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Eğer içi boşsa “0” döndürür.
 
-14-#Strncmp”
+8-#Strncmp”
 
 //**Ascii’ye göre 2’dizedeki n karakterin karşılaştırması yapılır.**//
 
@@ -248,7 +256,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Sonra 0 döndürüyoruz.
 
-15-#Strlcat”
+9-#Strlcat”
 
 //****İki dizeyi belli karakter kadar birleştiriyor****//
 
@@ -274,19 +282,15 @@ sonrasında i ve j’yi arttırıyoruz.
 
 sonrasında 2’stringin toplamını return ediyoruz.
 
-16-#Calloc”
+10-#Strnstr”
 
-//****Bellek ayırıp ayrılan belleğe 0 dolduruyor****//
+11-#Strtrim”
 
-“**C'deki calloc() işlevi, belirtilen miktarda bellek ayırmak ve ardından onu sıfıra başlatmak için kullanılır. İşlev, daha sonra istenen türe dönüştürülebilecek olan bu bellek konumuna bir geçersiz işaretçi döndürür. İşlev, tahsis edilecek bellek miktarını toplu olarak belirten iki parametre alır.”**
+12-#Split”
 
-👨‍🚀Count benim Tahsis edilecek eleman sayımdır.
+13-#Strmapi”
 
-👨‍🚀Size ise benim elemanlarımın boyutudur.
-
-👨‍🚀Eğer ptr “NULL”a eşitse “NULL” döndür.
-
-👨‍🚀Bzero kullanarak da elemanların sayısı * elemanların boyutu kadar sansürle dedim ve kendisini döndürdüm.
+14-#Striteri”
 
 —————————————————————————————————————————
 
@@ -325,6 +329,10 @@ sonrasında 2’stringin toplamını return ediyoruz.
 2-#Putchar”
 
 //****Eğer içi boşsa fonksiyondan çıkar değilse yazdırır.****//
+
+3-#Putendl”
+
+4-#Putstr”
 
 —————————————————————————————————————————
 
