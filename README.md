@@ -1,6 +1,8 @@
 # #42 Main Education”
 
-———————————————————⚡MAKEFILE 👇—————————————————————
+—————————————————————————————————————————
+
+⚡MAKEFILE 👇—————————————————————————————————————————
 
 ⚡ Libft.a’yı “NAME”e tanımladım aşağıda’da $(NAME)’i “all”a atadım all dediğim için hepsini kapsar.
 
@@ -59,9 +61,10 @@ Typdef kullanarak struct yapısını s_split_next olarak çağırdık.
 Sonradan tanımlı bir tip olduğunu belirtmek için “_t” kullanıyoruz.
 
 “CATEGORY”
-————————————————
-🚀FT_IS 👇
-————————————————
+
+—————————————————————————————————————————
+
+**🚀**FT_IS 👇—————————————————————————————————————————
 
 1-#Isalnum” 
 
@@ -101,17 +104,27 @@ char=l
 
 length=4
 
+🌌memset(), bir bellek bloğunu belirli bir değerle doldurmak için kullanılır. memset() fonksiyonunun sözdizimi aşağıdaki gibidir: // ptr ==> Doldurulacak belleğin başlangıç adresi // x ==> Doldurulacak değer // n ==> Doldurulacak bayt sayısı // ile başlayan // doldurulacak ptr void *memset(void *ptr, int x, size_t n);
+
 2-#Memmove”
 
 //****s1 ve s2 ile örtüşmeyen n karakterlik geçici bir diziye kopyalıyor sonra o diziden n karakterlik kadar kopyalanıyormuş gibi gösteriliyor****//
 
-Açıklama : İki ayrı bellek adresinde saklanan src ve dest dizinlerini bellekte çakışmalarını önleyerek birbirine aktarım (Kopyalama) yapar çakışmalar src ve dest teki bilgilerin birbiri üzerine binmesine ve bozulmaya neden olur.
+🌌Açıklama : İki ayrı bellek adresinde saklanan src ve dest dizinlerini bellekte çakışmalarını önleyerek birbirine aktarım (Kopyalama) yapar çakışmalar src ve dest teki bilgilerin birbiri üzerine binmesine ve bozulmaya neden olur.
+
+🌌Adresler aynı ise çakışma durumuna göre null basar
+Src’nin bellek adresi des’ten küçükse
+Des’i srcye kopyalıyor
 
 3-#Memcpy”
 
 //****n kadar karakteri s2 'den s1'e taşır üst üste aynı karakterler geliyorsa fonksiyon tanımsız.****//
-
-🌌Eğer verdiğim karakter ya da src ile dest
+🌌Birini birine kopyalıyor ama n kadar sonrasını alır.
+Oğuzhan
+Bilgisayar
+5 verirsem
+Bilgian
+n kadar sonrasına n kadar sonrasını kopyalar.
 
 4-#Memchr”
 
