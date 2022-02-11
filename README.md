@@ -446,7 +446,7 @@ tmp yi lst’in işaret ettiği.
 
 8-#Lstmap”
 
-’lst’ listesi üzerinde dolaşır ve ‘f’ fonksiyonunu
+**🪐**’lst’ listesi üzerinde dolaşır ve ‘f’ fonksiyonunu
 listenin her eleamanına uygular. Uygulama
 sonucunda oluşan yeni elemenlardan yeni bir
 liste oluşturulur. Gerekli olduğu durumlarda
@@ -455,5 +455,19 @@ temizlenebilir.
 
 9-#Lstclear”
 
-del’ ve free kullanarak elemanı siler ve hafızadaki yerini temizler.                                                      Ayrıca silme işleminde elmanın tüm successorlarını da temizler. Sonuç
+**🪐**del’ ve free kullanarak elemanı siler ve hafızadaki yerini temizler.                                                      Ayrıca silme işleminde elmanın tüm successorlarını da temizler. Sonuç
 olarak listenin pointerı NULL’ a ayarlanmalıdır.
+
+**🪐***lst bulunmuyorsa birşey yapma diyorum.
+
+**🪐***lst durumunda
+
+**🪐***lst’in next’ine temp diyorum 
+
+**🪐**content veriyi tutmamızı sağlar.
+
+**🪐***lst’in verilerini del ile beraber siliyoruz.
+
+**🪐**free(*lst) ile serbest bırakıyoruz.
+
+**🪐**En son olarak da *lst = temp yaparak bellekteki adreste kaybolmamayı sağlıyoruz.
