@@ -246,11 +246,11 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Eğer içi boşsa “0” döndürür.
 
-8-#Strncmp”
+8-#Str
 
 //**Ascii’ye göre 2’dizedeki n karakterin karşılaştırması yapılır.**//
 
-//****Stringin aynı mı olduğuna bakıyor ve farkını geri dönderiyor 2 tane stringin içndeki şeyler aynı ise 0 dönderir****//
+/**Stringin aynı mı olduğuna bakıyor ve farkını geri dönderiyor 2 tane stringin içndeki şeyler aynı ise 0 dönderir**// 
 
 “**strncmp işlevi, s1 ile gösterilen nesnenin ilk n karakterinin, gösterilen nesnenin ilk n karakterinden küçük, ona eşit veya daha büyük olmasına bağlı olarak negatif, sıfır veya pozitif bir tamsayı döndürür. s2'ye kadar”.**
 
@@ -294,7 +294,30 @@ sonrasında 2’stringin toplamını return ediyoruz.
 
 10-#Strnstr”
 
+//**strnstr() işlevi, en fazla len karakterin arandığı haystack dizesinde boş sonlandırılmış dize iğnesinin ilk oluşumunu bulur. '\0' karakterinden sonra gelen karakterler aranmaz.**//
+
+👨‍🚀1 Tane Samanlığım ve 1 tane iğnem var
+👨‍🚀Samanlık = Haystack	  İğne = Needle
+👨‍🚀Fonksiyonumun amacı samanlıkta iğne aramak.
+👨‍🚀2 tane Sayaç tanımlıyorum.
+👨‍🚀Eğer iğne boş bir dizeyse Samanlığı döndür diyorum.
+👨‍🚀Sonra i = 0 diyorum
+👨‍🚀Samanlığımın sayacı arayacağım uzunluktan küçük olduğu durumda
+👨‍🚀j = 0 diyorum
+👨‍🚀i+j veya iğnemizin bulunduğu karakter veya i+j küçükse arayacağımız uzunluktan
+ve i + j eşitse needle’nin j’sine yani iğnemizin bir karakterini bulduysak j’sini arttırıp diğer karakteri samanlığın içinde aramaya başlıyoruz.
+👨‍🚀Eğer karakteri bulduysak bulduğumuz yerin adresini samanlığın içinde döndürüyoruz.
+👨‍🚀Bulamadıysak i’yi arttırıp aramaya devam ediyoruz.
+👨‍🚀İğne samanlıkta değilse “NULL” döndürüyoruz.
+
 11-#Strtrim”
+
+//**strtrim, bir dizenin başından ve sonundan tüm boşluk karakterlerini kaldırır. Başka bir deyişle, bir dizgede sahip olabileceğiniz tüm gereksiz beyazları kaldıracaktır.**//
+
+Malloc kullanrak hafızada yer ayırılır ardından
+ana stringde kırpılmak istenilen karakterlerin
+hepsi kırpılır sonuç olarak elde edilen yeni string
+döndürülür.
 
 12-#Split”
 
@@ -360,7 +383,7 @@ struct s_list *next;
 
 **🪐**Biz t_list’i kısaltm olarak kullanıyoruz yani t_list yapısını kullandığımız da *content ve *next’de elimizde oluyor.
 
-**🪐**content :Elementin içerdiği veri. void * tipinde olması istediğiniz türde veriyi
+**🪐**content :Elemanın içerdiği veri. void * tipinde olması istediğiniz türde veriyi
 tutmanızı sağlar.
 §next :Bir sonraki elementin adresini tutar eğer son elemensa NULL değerindedir.
 
@@ -401,7 +424,9 @@ first’teki content’in [içi](http://içi.ne)ne yazıcağımız veriyi atıyo
 
 **🪐**Lst içinde alan yoksa return; birşey yapma ekleyemeyiz
 **🪐**Eleman yoksa new ekle ki tek eleman olduğu için baş ve son olsun dedik.
-*lst’ime a dedim en baş elemana yani a’nın next’i “NULL”ı göstermediği durumda next’i **🪐**“NULL” gösterene kadar (işaret edene kadar) ara dedim bulduğu anda a’nın nexti’ne de new’i yerleştirdim.
+*lst’ime a dedim en baş elemana yani a’nın next’i “NULL”ı göstermediği durumda next’i **🪐**“NULL” gösterene kadar (işaret edene kadar) ara dedim bulduğu anda a’nın nexti’ne de new’i
+
+yerleştirdim.
 
 5-#Lstdelone”
 
@@ -421,4 +446,14 @@ tmp yi lst’in işaret ettiği.
 
 8-#Lstmap”
 
+’lst’ listesi üzerinde dolaşır ve ‘f’ fonksiyonunu
+listenin her eleamanına uygular. Uygulama
+sonucunda oluşan yeni elemenlardan yeni bir
+liste oluşturulur. Gerekli olduğu durumlarda
+delete fonksiyonu kullanıalarak elemanın içeriği
+temizlenebilir.
+
 9-#Lstclear”
+
+del’ ve free kullanarak elemanı siler ve hafızadaki yerini temizler.                                                      Ayrıca silme işleminde elmanın tüm successorlarını da temizler. Sonuç
+olarak listenin pointerı NULL’ a ayarlanmalıdır.
