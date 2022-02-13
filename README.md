@@ -2,7 +2,7 @@
 
 —————————————————————————————————————————
 
-⚡MAKEFILE 👇—————————————————————————————————————————
+⚡MAKEFILE 👇✅—————————————————————————————————————————
 
 ⚡ Libft.a’yı “NAME”e tanımladım aşağıda’da $(NAME)’i “all”a atadım all dediğim için hepsini kapsar.
 
@@ -46,6 +46,8 @@ Sonrasında da çıktı olarak bize hepsini veriyor.”$(NAME)”e göre bize $(
 
 ⚡“**ar rcs” Bir kitaplığı derlemek için “Makefile” kullanırken kullanacağınız en olası komuttur. r, kitaplık zaten mevcutsa, kitaplık içindeki eski dosyaları yeni dosyalarınızla değiştirin.c, mevcut değilse kütüphaneyi oluşturmak anlamına gelir.**
 
+⚡Clean sadece oluşan “.o” uzantılı dosyaları siler.Fclean yaptığımda “NAME”i de silecektir.Yani libft.a’yı.
+
 —————————————————————————————————————————
 
 “LIBFT.H”
@@ -60,29 +62,29 @@ Typdef kullanarak struct yapısını s_split_next olarak çağırdık.
 
 Sonradan tanımlı bir tip olduğunu belirtmek için “_t” kullanıyoruz.
 
-“CATEGORY”
+[“CATEGORY”](https://cdn.intra.42.fr/pdf/pdf/40197/tr.subject.pdf)
 
 —————————————————————————————————————————
 
 **🚀**FT_IS 👇—————————————————————————————————————————
 
-1-#Isalnum” 
+1-#Isalnum” ✅
 
 **🚀**Numerik bir karakter olup olmadığını gösterir sayıysa ya da alfabetik bir karakter ise 1 değilse 0 dönderir.
 
-2-#Isalpha”
+2-#Isalpha” ✅
 
 **🚀**Alfabetik bir karakter ise yani “A” ile “Z” ya da “a” ile “z” arasında ise 1 değilse 0 dönderir.
 
-3-#Isascii”
+3-#Isascii” ✅ 
 
 **🚀**Ascii’de bir karakter olup olmadığına bakar ascii’de bir karakterse 1 değilse 0 dönderir.
 
-4-#Isdigit”
+4-#Isdigit”✅
 
 **🚀**Bir rakamsa 1 değilse 0 dönderir.
 
-5-#Isprint”
+5-#Isprint”✅
 
 **🚀**Ascii’de yazdırılabilir bir karakterse 1 değilse 0 dönderir.
 
@@ -92,7 +94,7 @@ Sonradan tanımlı bir tip olduğunu belirtmek için “_t” kullanıyoruz.
 
 —————————————————————————————————————————
 
-1-#Memset”
+1-#Memset”✅
 
 //****Stringin belli bir kısmını sansürlüyor****/
 
@@ -104,7 +106,14 @@ char=l
 
 length=4
 
-🌌memset(), bir bellek bloğunu belirli bir değerle doldurmak için kullanılır. memset() fonksiyonunun sözdizimi aşağıdaki gibidir: // ptr ==> Doldurulacak belleğin başlangıç adresi // x ==> Doldurulacak değer // n ==> Doldurulacak bayt sayısı // ile başlayan // doldurulacak ptr void *memset(void *ptr, int x, size_t n);
+🌌Bir tane sayaç tanımladım.
+
+🌌i < len’den küçük olduğu durumlarda yani sayaç verdiğim uzunluğa gelene kadar verdiğim karakterlerle dolsun diyorum. 
+
+🌌memset(), bir bellek bloğunu belirli bir değerle doldurmak için kullanılır. memset() fonksiyonunun sözdizimi aşağıdaki gibidir: 
+// ptr ==> Doldurulacak belleğin başlangıç adresi 
+// x ==> Doldurulacak değer 
+// n ==> Doldurulacak bayt sayısı // ile başlayan // doldurulacak ptr void *memset(void *ptr, int x, size_t n);
 
 2-#Memmove”
 
@@ -116,7 +125,7 @@ length=4
 Src’nin bellek adresi des’ten küçükse
 Des’i srcye kopyalıyor
 
-3-#Memcpy”
+3-#Memcpy”✅ 
 
 //****n kadar karakteri s2 'den s1'e taşır üst üste aynı karakterler geliyorsa fonksiyon tanımsız.****//
 🌌Birini birine kopyalıyor ama n kadar sonrasını alır.
@@ -126,7 +135,13 @@ Bilgisayar
 Bilgian
 n kadar sonrasına n kadar sonrasını kopyalar.
 
-4-#Memchr”
+Eğer src dest’e eşitse direkt olarak return dest döndür. 
+
+Sayacımızı 0’a eşitleyip sayacımızın n den küçük olduğu durumda n kadar sonrasını n kadar sonrasına kopyalar 
+
+en sonda return(dest)son dizenin uzunluğunu döndürür.
+
+4-#Memchr”✅
 
 //****C’nin ilk örneği için stringin ilk n baytını tarar****//
 
@@ -138,19 +153,19 @@ n kadar sonrasına n kadar sonrasını kopyalar.
 
 🌌Ve i’yi arttırıp return null dönderiyoruz.
 
-5-#Memcmp”
+5-#Memcmp”✅
 
 //****bellek alanı str1 ve bellek alanı str2'nin ilk n baytını karşılaştırır.**//**
 
-🌌Size_t:Asla negatif değer alamaz int’i tanımlıyoruz.
+🌌Size_t:Asla negatif değer alamaz int’i tanımlıyoruz”.
 
 🌌i ‘nin n’den küçük olduğu durumda yani bizim verdiğimiz n kadar durumundan küçük olduğu
 
 durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciideki karakterlerin arasındaki farkı dönderiyoruz.
 
-🌌Bu fonksiyon bellekte bakıyor aralarındaki farka.
+🌌Bu fonksiyon bellekte bakıyor aralarındaki farkı alıyor.
 
-6-#Calloc”
+6-#Calloc”✅
 
 //**Bellek ayırıp ayrılan belleğe 0 dolduruyor**//
 
@@ -164,7 +179,9 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 🌌Bzero kullanarak da elemanların sayısı * elemanların boyutu kadar sansürle dedim ve kendisini döndürdüm.
 
-7-#Bzero”
+🌌Yani atıcağım eleman sayısı * onların baytı kadar elemanın boyutu kadar yer açıp 0 ile doldurdum.
+
+7-#Bzero”✅
 
 //**Stringin belli bir kısmını sansürlüyor**//
 
@@ -172,13 +189,17 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 🌌”n” değerimizin 0’dan büyük olduğu durumda 0’a gelene kadar ki durumda gittiğimiz adreste “b”yi arttırıp 0’a eşitliyoruz.
 
+🌌Verdiğimiz “n” değerine göre oradan 0’a gelene kadar 
+
+“emirhan” kelimesinin n’ine 3 verdiğimiz durumda 0’a gelene kadar azaltıp adres baytını 0’a eşitliyor.
+
 —————————————————————————————————————————
 
 👨‍🚀FT_STR👇
 
 —————————————————————————————————————————
 
-1-#Strchr” 
+1-#Strchr”✅
 
 //****Bize verilen stringin belli bir karakterden sonrasını alıyoruz****//
 
@@ -190,21 +211,11 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 *Size_t’ de bir int’dir.Size_t’de sadece pozitif değer alabilir.Asla negatif bir sayı alamıyor.
 
-2-#Strdup”
-
-//****Stringin yerini pointer’a vermek****//
-
-👨‍🚀2 tane değişken tanımlıyoruz *twin pointer olarak tanımlıyoruz sonrasında twinde yer açıyoruz.Malloc ile null’a denk gelmemesi için uzunluğunun bir fazlası kadar.
-
-👨‍🚀i = 0 yapıyoruz.Stringim son karakter olan “NULL”a eşit değilse stringimi twin’e [atıyorum.](http://atıyorum.ve)
-
-👨‍🚀Ve “i”yi arttırıyorum attıktan sonra twindeki karakterim son karaktere eşit olduğunda twindeki stringimi dönüyorum.
-
-3-#Strrchr”
+3-#Strrchr”✅
 
 👨‍🚀Bize *string veriyor önce int’le i tanımlıyoruz ve 0’a eşitleyip arttırıyoruz.Dizenin uzunluğunu ölçmüş oluyoruz.Bu fonksiyon sondan geriye doğru arama yapıyor.Mesela c’miz a olsun kelimemiz de araba olsun “araba” kelimesinde gözüken en son a’yı dönderir.C’nin en son gözüktüğü yerin adresini istiyor bizden o yüzden en son gördüğü yerdeki adrese eşitliyor ve uzunluğunu return ediyor.sonra geriye doğru gelip diğer karakterlere null koyuyor.
 
-4- #Strdup”
+4- #Strdup”✅
 
 //****S dizesinin bir kopyası olan yeni bir dizeye bir işaretçi döndürür.Yeni dizge için bellek malloc ile elde edilir****//
 
@@ -214,7 +225,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Sonrasında i’mizi 0’a eşitleyip son karaktere eşit değilse dizemizi twin’in içine kopyalayıp i’mizi arttırıyoruz onun içinde de sayıyor.Kopyaladığımız dize son karaktere eşit değilse elde ettiğimiz dizeyi dönderiyoruz.
 
-5-#Strjoin”
+5-#Strjoin”✅
 
 //****2 tane stringi aralarında bir boşluk olacak şekilde bağlayarak tek bir dize olarak gözükmesini sağlar****//
 
@@ -228,7 +239,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Son dize uzunluğumuz null’a eşit değilse dizenin kendisini dönderiyoruz.
 
-6-#Strlen”
+6-#Strlen”✅
 
 //****Stringimizin uzunluğunu veren fonksiyondur****//
 
@@ -236,7 +247,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀İ değerimizi 0’a eşitliyoruz. i’yi arttırarak stringin uzunluğunu buluyoruz.
 
-7-#Substr”
+7-#Substr”✅
 
 //****Bir stringin belli bir kısmından alt metin almamızı sağlar****//
 
@@ -246,7 +257,11 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Eğer içi boşsa “0” döndürür.
 
-8-#Str
+👨‍🚀Sayacımızı 0’a eşitliyoruz 
+
+👨‍🚀Eğer başlangıç uzunluğumuz s’dizesinin uzunluğundan büyükse boş döndürüyor.
+
+8-#Strncmp”✅
 
 //**Ascii’ye göre 2’dizedeki n karakterin karşılaştırması yapılır.**//
 
@@ -266,7 +281,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀Sonra 0 döndürüyoruz.
 
-9-#Strlcat”
+9-#Strlcat”✅
 
 //****İki dizeyi belli karakter kadar birleştiriyor****//
 
@@ -292,7 +307,7 @@ sonrasında i ve j’yi arttırıyoruz.
 
 sonrasında 2’stringin toplamını return ediyoruz.
 
-10-#Strnstr”
+10-#Strnstr”✅
 
 //**strnstr() işlevi, en fazla len karakterin arandığı haystack dizesinde boş sonlandırılmış dize iğnesinin ilk oluşumunu bulur. '\0' karakterinden sonra gelen karakterler aranmaz.**//
 
@@ -331,13 +346,13 @@ döndürülür.
 
 —————————————————————————————————————————
 
-1-#Toupper”
+1-#Toupper”✅
 
 //****Küçük Harfleri büyük yapar****//
 
 🌓Aldığımız küçük harf ascii’de -32 değer yukarı giderek büyür.
 
-2-#Tolower”
+2-#Tolower”✅
 
 //****Büyük Harfleri küçük yapar****//
 
@@ -345,11 +360,11 @@ döndürülür.
 
 —————————————————————————————————————————
 
-**🛸**FT_PUT 👇 
+**[🛸**FT_PUT 👇](http://codewiki.wikidot.com/c:system-calls:write) 
 
 —————————————————————————————————————————
 
-1-#Putnbr” 
+1-#Putnbr” ✅
 
 **🛸**Eğer minimum değer’e eşitse direkt yazdırıyor.
 
@@ -359,13 +374,23 @@ döndürülür.
 
 **🛸**Eğer değilse direkt modunu alıp 0’la toplayıp yazdırır.
 
-2-#Putchar”
+2-#Putchar”✅
 
-//****Eğer içi boşsa fonksiyondan çıkar değilse yazdırır.****//
+**🛸**Eğer içi boşsa fonksiyondan çıkar değilse yazdırır.
 
-3-#Putendl”
+3-#Putendl”✅
 
-4-#Putstr”
+**🛸**Verilecek string yada fd olmadığı durumda birşey yapma.
+
+**🛸**Sayaç tanımlayıp onu 0’a eşitliyoruz.
+
+**🛸**Sonrasında write ile yazdırıyoruz standart çıktıyı almamız için “1” diyoruz ve i’yi arttırıyoruz 
+
+alt satıra geçip yazdırıyoruz.
+
+4-#Putstr”✅
+
+**🛸**Eğer string yoksa veya fd yoksa birşey yapma varsa stringimizin karakterlerini bir bir arttırarak yazdır.
 
 —————————————————————————————————————————
 
@@ -373,7 +398,7 @@ döndürülür.
 
 —————————————————————————————————————————
 
-1-#Lstsize”
+1-#Lstsize”✅
 
 typedef struct s_list
 {
@@ -393,7 +418,7 @@ tutmanızı sağlar.
 
 **🪐**Olduğumuz lst eşit değilse “NULL” yani son elemana eşit değilse lst = lst→next diyip son elemanı arıyoruz “NULL”a yani son elemana eşit olana kadar aramaya devam ediyoruz.Son elemanı bulduğumuzda “(i)” size dönüyoruz.
 
-2-#Lstnew”
+2-#Lstnew”✅
 
 “Malloc kullanarak memoryden yer ayırılır ve yeni”
 element çıktı olarak verilir. Content değişkeni
@@ -408,7 +433,7 @@ Next değişkeni ise NULL değeri ile başlatılmalıdır.
 
 first’teki content’in [içi](http://içi.ne)ne yazıcağımız veriyi atıyoruz first’ün next’ide “NULL”ı göstersin diyoruz.Yani bir sonraki adres’i göstermesin gibi birşey diyoruz.
 
-3-#Lstaddfront” 
+3-#Lstaddfront” ✅
 
 //**Listenin başına yeni bir eleman ekler(new)**//
 
@@ -418,7 +443,7 @@ first’teki content’in [içi](http://içi.ne)ne yazıcağımız veriyi atıyo
 
 **🪐**Artık listenin başı new olur.
 
-4-#Lstaddback”
+4-#Lstaddback”✅
 
 //**“new” elemanını listenin en sonuna ekler**//
 
@@ -428,11 +453,11 @@ first’teki content’in [içi](http://içi.ne)ne yazıcağımız veriyi atıyo
 
 yerleştirdim.
 
-5-#Lstdelone”
+5-#Lstdelone”✅
 
 **🪐**Eğer lst yoksa döndürme lst’in işaret ettiği veri tutmamızı sağlayan content’i siliyoruz ve serbest bırakıyoruz.
 
-6-#Lstlast”
+6-#Lstlast”✅
 
 **🪐**Eğer başta liste yoksa “NULL” döndürüyoruz.
 
@@ -453,7 +478,7 @@ liste oluşturulur. Gerekli olduğu durumlarda
 delete fonksiyonu kullanıalarak elemanın içeriği
 temizlenebilir.
 
-9-#Lstclear”
+9-#Lstclear”✅
 
 **🪐**del’ ve free kullanarak elemanı siler ve hafızadaki yerini temizler.                                                      Ayrıca silme işleminde elmanın tüm successorlarını da temizler. Sonuç
 olarak listenin pointerı NULL’ a ayarlanmalıdır.
