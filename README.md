@@ -1,5 +1,4 @@
-# #42 Main Education”
-
+#42 Main Education”
 —————————————————————————————————————————
 
 ⚡MAKEFILE 👇✅—————————————————————————————————————————
@@ -22,7 +21,7 @@ Ve sistem “NAME” ile başlar.
 
 ⚡ Shell komutunu tekrardan “”CCFLAGS” olarak tanımladık.
 
-⚡ “PHONY” = Öncelikli çalıştırma işlemini yapar.Dizinde aramak yerine direkt kodu çalıştırır.Yani dosyamızın içinde eğer yazdığımız.(all, clean, fclean, re, bonus)’dan birisi varsa çalışmayacaktır.Öncelikli olarak tanımladığımız için “MakeFile” içinde bulup çalışacaktır.
+⚡ “PHONY” = Öncelikli çalıştırma işlemini yapar.Dizinde aramak yerine direkt kodu çalıştırır.Yani dosyamızın içinde eğer yazdığımız.(all, clean, fclean, re, bonus)’dan birisi varsa çalışmayacaktır.Öncelikli olarak tanımladığımız için “Mak-eFile” içinde bulup çalışacaktır.
 
 ⚡ $(NAME): $(OBJS) “OBJS” Dosyalarını “NAME”e kural olarak belirle.
 
