@@ -1,4 +1,5 @@
-#42 Main Education”
+# #42 Main Education”
+
 —————————————————————————————————————————
 
 ⚡MAKEFILE 👇✅—————————————————————————————————————————
@@ -212,7 +213,17 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 3-#Strrchr”✅
 
-👨‍🚀Bize *string veriyor önce int’le i tanımlıyoruz ve 0’a eşitleyip arttırıyoruz.Dizenin uzunluğunu ölçmüş oluyoruz.Bu fonksiyon sondan geriye doğru arama yapıyor.Mesela c’miz a olsun kelimemiz de araba olsun “araba” kelimesinde gözüken en son a’yı dönderir.C’nin en son gözüktüğü yerin adresini istiyor bizden o yüzden en son gördüğü yerdeki adrese eşitliyor ve uzunluğunu return ediyor.sonra geriye doğru gelip diğer karakterlere null koyuyor.
+👨‍🚀Bize *string veriyor 
+
+önce int’le i tanımlıyoruz ve 0’a eşitleyip arttırıyoruz.Dizenin uzunluğunu ölçmüş oluyoruz.
+
+👨‍🚀Bu fonksiyon sondan geriye doğru arama yapıyor.
+
+👨‍🚀Mesela c’miz a olsun kelimemiz de araba olsun “araba” kelimesinde gözüken en son a’yı dönderir.
+
+👨‍🚀C’nin en son gözüktüğü yerin adresini istiyor bizden o yüzden en son gördüğü yerdeki adrese eşitliyor ve uzunluğunu return ediyor.
+
+👨‍🚀Sonra geriye doğru gelip diğer karakterlere null koyuyor.
 
 4- #Strdup”✅
 
@@ -222,7 +233,7 @@ durumda eğer s1+i = değilse s2+i ye bunların farkını döndürüyoruz asciid
 
 👨‍🚀2 tane değişken tanımlıyoruz malloc ile yer açıyoruz uzunluğunun bir fazlası kadar eğer twine eşit değilse yani o kadar yer ayrılmadıysa null döndürüyor.
 
-👨‍🚀Sonrasında i’mizi 0’a eşitleyip son karaktere eşit değilse dizemizi twin’in içine kopyalayıp i’mizi arttırıyoruz onun içinde de sayıyor.Kopyaladığımız dize son karaktere eşit değilse elde ettiğimiz dizeyi dönderiyoruz.
+👨‍🚀Sonrasında i’mizi 0’a eşitleyip son karaktere eşit değilse dizemizi twin’in içine kopyalayıp i’mizi arttırıyoruz onun içinde de sayıyor.Kopyaladığımız dize son karaktere eşitse elde ettiğimiz dizeyi dönderiyoruz.
 
 5-#Strjoin”✅
 
@@ -334,6 +345,28 @@ hepsi kırpılır sonuç olarak elde edilen yeni string
 döndürülür.
 
 12-#Split”
+
+Bir dizgeyi bir sınırlayıcı ile bölmek çok yaygın bir iştir. Örneğin, bir dosyadan virgülle ayrılmış bir öge listemiz var ve bir dizide tek tek öğeler istiyoruz bunun için kullanılır 
+
+örnek ;
+
+printf("%s\n", "ft_split(\"If money can't buy happyness\", 'y');");
+
+strings = ft_split("If money can't buy happyness", 'y');
+
+**while** (*strings)
+
+printf("%s\n", *strings++);
+
+printf("----------\n");
+
+çıktısı;
+
+ft_split("If money can't buy happyness", 'y');
+If mone
+can't bu
+happ
+ness
 
 13-#Strmapi”
 
@@ -479,7 +512,7 @@ temizlenebilir.
 
 9-#Lstclear”✅
 
-**🪐**del’ ve free kullanarak elemanı siler ve hafızadaki yerini temizler.                                                      Ayrıca silme işleminde elmanın tüm successorlarını da temizler. Sonuç
+**🪐**del’ ve free kullanarak elemanı siler ve hafızadaki yerini temizler.                                                  Ayrıca silme işleminde elmanın tüm successorlarını da temizler. Sonuç
 olarak listenin pointerı NULL’ a ayarlanmalıdır.
 
 **🪐***lst bulunmuyorsa birşey yapma diyorum.
